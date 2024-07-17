@@ -1,6 +1,6 @@
 package ca.ucalgary.ensf380;
 
-public class Univeristy {
+public class University {
 	
 	// Professor Dave Supervises 3 students, 2 of them are twins. They are all located in Calgary
 	// and are eligible to take the course based on their location but Jolly is unable to take the course
