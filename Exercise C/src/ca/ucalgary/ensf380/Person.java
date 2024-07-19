@@ -6,7 +6,7 @@ public abstract class Person {
 	protected String phoneNumber;
 	protected String emailAddress;
 	protected Address address;
-	private int lastPersonalNumber;
+	private static int lastPersonalNumber = 1000; // Static to share among all instances
 	
 	//Default Constructor
 	public Person(String name, String phoneNumber, String emailAddress, Address address, int lastPersonalNumber) {
@@ -15,14 +15,13 @@ public abstract class Person {
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
 		this.address = address;
-		this.lastPersonalNumber = lastPersonalNumber;
 	}
 
 	// Next Personal Number Method
-	protected String nextPersonalNumber(short type){
-		lastPersonalNumber += 1;
-		return String.valueOf(lastPersonalNumber);
-	}
+    protected static String nextPersonalNumber(short type) {
+        lastPersonalNumber += 1;
+        return String.valueOf(lastPersonalNumber);
+    }
 	
 	// Valid Address Method
 	public boolean hasValidAddress() {

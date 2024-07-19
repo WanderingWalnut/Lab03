@@ -58,8 +58,15 @@ public class University {
         		System.out.println("- " + studentArray[i].getName() + " is not eligible to take the course");
         	}
         }
-        		
-        
+
+        // Use nextPersonalNumber to generate a new personal number
+        System.out.println("Generating new personal numbers:");
+        for (Student student : studentArray) {
+            System.out.println(student.getName() + " - New Personal Number: " + student.nextPersonalNumber((short) 1));
+        }
+
+        // Output address as label for professor
+        System.out.println("Professor's Address Label: " + profAddress.outputAsLabel());
 	}
 
 }
